@@ -11,3 +11,9 @@ import('./dep_two.js').then((module) => {
 
 	hello();
 })
+
+System.import('./dep_two.js').then((module) => {
+	let hello = module.hello;
+
+	hello();
+})

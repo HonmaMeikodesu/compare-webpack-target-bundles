@@ -149,7 +149,8 @@
 /******/ })
 /************************************************************************/
 /******/ ([
-/* 0 */
+/* 0 */,
+/* 1 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -166,13 +167,12 @@ const foo = function() {
 
 
 /***/ }),
-/* 1 */,
 /* 2 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__dep_one_js__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__dep_one_js__ = __webpack_require__(1);
 
 
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__dep_one_js__["a" /* something */])(); 
@@ -181,7 +181,13 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__dep_one_js__["b" /* foo */])(
 var fooboo = document.querySelectorAll('.foo');
 console.log(fooboo);
 
-__webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 1)).then((module) => {
+__webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 0)).then((module) => {
+	let hello = module.hello;
+
+	hello();
+})
+
+__webpack_require__.e/* import() */(0/* duplicate */).then(__webpack_require__.bind(null, 0)).then((module) => {
 	let hello = module.hello;
 
 	hello();
